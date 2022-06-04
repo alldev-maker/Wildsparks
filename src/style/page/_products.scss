@@ -1,0 +1,146 @@
+.products-section {
+  background-image: url("../images/yellow-pattern.png");
+  @include mq("sm", max) {
+    background: $red;
+  }
+
+  //Product Item
+  .product-item {
+    margin-bottom: 24px;
+    img {
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 30px;
+      border-radius: 0 0 24px 24px;
+      background-color: black;
+      @include mq("lg", max) {
+        padding: 20px 18px;
+      }
+      .product {
+        &-title {
+          color: white;
+          @include mq("xl", max) {
+            font-size: 13px;
+          }
+        }
+        &-size {
+          margin: 12px 0 24px;
+          color: white;
+          @include mq("xl", max) {
+            margin: 8px 0 16px;
+            font-size: 12px;
+          }
+        }
+        &-rate {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          color: white;
+          @include mq("xl", max) {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+      .btn-red {
+        padding: 12px 24px;
+        font-size: 18px;
+        @include mq("xl", max) {
+          padding: 8px 16px;
+          font-size: 14px;
+        }
+        @include mq("md", max) {
+          color: black;
+          background-color: $yellow;
+        }
+      }
+      .star {
+        width: 22px;
+        height: 22px;
+        margin-right: 6px;
+        @include mq("sm", max) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+  .product-type {
+    color: white;
+    font-size: 36px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @include mq("sm", max) {
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+}
+
+//Filter Box
+.filter-box {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000000;
+  border-radius: 24px;
+  width: max-content;
+  margin-bottom: 40px;
+  @include mq("md", max) {
+    width: 100%;
+    padding: 8px 10px;
+  }
+  .filter-label {
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 5px 24px;
+    @include mq("lg", max) {
+      font-size: 18px;
+    }
+    @include mq("md", max) {
+      display: none;
+    }
+  }
+  .filter-list {
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    @include mq("md", max) {
+      width: 100%;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .filter-item {
+      padding: 6px 12px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 125%;
+      border: none;
+      border-radius: 6px;
+      margin-right: 30px;
+      background-color: white;
+      &.active {
+        background-color: $yellow;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      @include mq("lg", max) {
+        font-size: 18px;
+      }
+      @include mq("md", max) {
+        margin-right: 10px;
+      }
+      @include mq("sm", max) {
+        font-size: 9.5px;
+        margin: 0;
+      }
+    }
+  }
+}

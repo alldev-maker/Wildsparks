@@ -1,0 +1,57 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Druk Wide Bold";
+  color: black;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 115%;
+  margin-bottom: 42px;
+  @include mq("lg", max) {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 125%;
+  @include mq("lg", max) {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 145%;
+  @include mq("sm", max) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  @include mq("sm", max) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+p {
+  margin-bottom: 0;
+  color: black;
+  @include mq("sm", max) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

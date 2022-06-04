@@ -1,0 +1,143 @@
+header {
+  @include mq("md") {
+    margin-top: 80px;
+  }
+  .navbar {
+    flex-wrap: nowrap;
+    background-color: white;
+    border-radius: 24px;
+    padding: 23px 0;
+    @include mq("md") {
+      background: $green;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include mq("lg") {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include mq("xl") {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+    .connect-us {
+      display: none;
+    }
+    &-nav {
+      flex-direction: row;
+      align-items: center;
+      margin-left: auto;
+      .nav-item {
+        flex-shrink: 0;
+        @include mq("lg") {
+          margin-left: 30px;
+        }
+        .nav-link {
+          padding: 12px;
+          color: white;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 29.52px;
+          &.active {
+            background: #006441;
+            border-radius: 12px;
+          }
+        }
+      }
+      @include mq("md", max) {
+        display: none;
+        &.active {
+          display: flex;
+          position: absolute;
+          top: 83px;
+          left: 0px;
+          width: 101vw;
+          height: calc(100vh - 83px);
+          padding-top: 30px;
+          margin-left: -20px;
+          background: white;
+          flex-direction: column;
+          z-index: 99;
+          overflow: auto;
+          .nav-item {
+            width: calc(100% - 40px);
+            .nav-link {
+              font-family: "Druk Wide Bold";
+              line-height: 31.34px;
+              color: black;
+              &.active {
+                color: $red;
+                background-color: white;
+              }
+            }
+          }
+          .connect-us {
+            display: block;
+            background-color: white;
+            padding-left: 0;
+            padding-right: 0;
+            p {
+              color: black;
+              text-align: left;
+              white-space: normal;
+            }
+            ul {
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+
+    @include mq("md") {
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+}
+
+// Hamburger Button
+.hamburger {
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 101;
+
+  span {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 4px;
+    border-radius: 3px;
+    background: black;
+    z-index: 1;
+    transform-origin: 0px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.active span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-10px, -17.5px);
+    width: 30px;
+    &:first-child {
+      opacity: 0;
+      transform: rotate(0deg) scale(0, 0);
+    }
+    &:nth-last-child(2) {
+      transform: rotate(-45deg) translate(-2.5px, 9px);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.btn {
+  border-radius: 78px;
+  color: white;
+  font-weight: 500;
+  &-red {
+    background-color: $red;
+    &:hover {
+      background-color: #fa3137;
+      transition: all 0.2s ease-in;
+    }
+  }
+  &-yellow {
+    background-color: $yellow;
+  }
+  &:hover {
+    color: white;
+  }
+}

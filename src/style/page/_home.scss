@@ -1,0 +1,156 @@
+.hero-section {
+  margin: 32px 0;
+  @include mq("md") {
+    margin: 48px 0;
+  }
+  .hero-img {
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 36.37%,
+      rgba(0, 0, 0, 0.75) 118.5%
+    );
+    mix-blend-mode: normal;
+    border-radius: 24px;
+    object-fit: cover;
+    @include mq("md", max) {
+      height: 414px;
+    }
+  }
+  .swiper-pagination {
+    &-bullet {
+      margin: 0 8px !important;
+      background-color: white;
+      opacity: 1;
+      &-active {
+        background-color: $yellow;
+      }
+      @include mq("md") {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.home-products {
+  background-image: url("../images/red-pattern.png");
+  @include mq("sm", max) {
+    background: $red;
+  }
+  .product-item {
+    img {
+      width: 100%;
+      border: 24px 24px 0 0;
+      object-fit: cover;
+    }
+    &__body {
+      border-radius: 0 0 24px 24px;
+      padding: 37px 0;
+      background-color: black;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .product-title {
+        flex-shrink: 0;
+        margin-bottom: 0;
+        color: white;
+        @include mq("lg", max) {
+          font-size: 13px;
+        }
+      }
+      .btn-red {
+        padding: 12px 50px;
+        @include mq("lg", max) {
+          margin-top: 16px;
+        }
+        @include mq("sm", max) {
+          margin-top: 0;
+          font-size: 9px;
+          padding: 6px 25px;
+        }
+      }
+      @include mq("lg", max) {
+        flex-direction: column;
+      }
+      @include mq("sm", max) {
+        flex-direction: row;
+      }
+    }
+    @include mq("sm", max) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.recipes-section {
+  background-image: url("../images/green-pattern.png");
+  @include mq("sm", max) {
+    background: $green;
+  }
+  .recipe-item {
+    margin-bottom: 24px;
+    img {
+      width: 100%;
+      border: 24px 24px 0 0;
+      object-fit: cover;
+    }
+    &__body {
+      background-color: white;
+      border-radius: 0 0 24px 24px;
+      padding: 30px;
+      @include mq("lg", max) {
+        padding: 22px;
+      }
+      .recipe-title {
+        @include mq("lg", max) {
+          font-size: 14px;
+        }
+      }
+      .recipe-info {
+        display: flex;
+        justify-content: space-between;
+        margin: 12px 0 24px;
+        p {
+          @include mq("lg", max) {
+            font-size: 12px;
+          }
+        }
+        @include mq("sm", max) {
+          margin: 8px 0 16px;
+        }
+      }
+      .recipe-label {
+        font-weight: 600;
+        line-height: 20px;
+      }
+      .btn-red {
+        padding: 12px 24px;
+        font-weight: 500;
+        @include mq("md", max) {
+          padding: 8px 18px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .filter-box {
+    .filter-list {
+      .filter-item.active {
+        background-color: #eaeaea;
+      }
+    }
+  }
+  .btn-load-more {
+    padding: 24px 36px;
+    background-color: white;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+    @include mq("md", max) {
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+  }
+}
