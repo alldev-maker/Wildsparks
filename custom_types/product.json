@@ -60,40 +60,27 @@
       }
     },
     "description": {
-      "type": "Text",
+      "type": "StructuredText",
       "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
         "label": "Description",
         "placeholder": "Description"
       }
     },
     "nutritional_facts": {
-      "type": "Group",
+      "type": "StructuredText",
       "config": {
-        "fields": {
-          "fact": {
-            "type": "Text",
-            "config": {
-              "label": "Fact",
-              "placeholder": "Fact"
-            }
-          }
-        },
-        "label": "nutritional_facts"
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Nutritional Facts",
+        "placeholder": "Nutritional Facts"
       }
     },
     "ingredients": {
-      "type": "Group",
+      "type": "StructuredText",
       "config": {
-        "fields": {
-          "ingredient": {
-            "type": "Text",
-            "config": {
-              "label": "Ingredient",
-              "placeholder": "Ingredient"
-            }
-          }
-        },
-        "label": "ingredients"
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Ingredients",
+        "placeholder": "Ingredients"
       }
     },
     "rating": {

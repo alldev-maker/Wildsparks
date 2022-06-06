@@ -3,6 +3,11 @@
   @include mq("sm", max) {
     background: $red;
   }
+  &.detail {
+    @include mq("sm", max) {
+      background: $yellow;
+    }
+  }
 
   //Product Item
   .product-item {
@@ -76,6 +81,101 @@
     @include mq("sm", max) {
       text-align: center;
       font-size: 24px;
+    }
+  }
+}
+
+.product-detail {
+  background: #f7f8fa;
+  border-radius: 24px;
+  margin: 32px 0;
+  @include mq("md") {
+    margin: 48px 0;
+  }
+  .product {
+    &-name {
+      padding: 60px 60px 0;
+      @include mq("md", max) {
+        padding: 32px 32px 0;
+      }
+    }
+  }
+  .headline {
+    margin: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @include mq("lg", max) {
+      margin: 0 32px;
+    }
+    @include mq("sm", max) {
+      margin: 0 24px;
+    }
+    &-stat {
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+      width: max-content;
+      @include mq("lg", max) {
+        margin-bottom: 24px;
+      }
+      @include mq("sm", max) {
+        padding: 12px;
+        background-color: white;
+        border-radius: 12px;
+        width: 100%;
+      }
+    }
+    &-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 125%;
+      @include mq("lg", max) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  .product-image {
+    border-radius: 24px;
+    @include mq("md", max) {
+      margin-left: 24px;
+      margin-right: 24px;
+      margin-bottom: 32px;
+    }
+  }
+  .product-info {
+    margin-left: 24px;
+    margin-right: 24px;
+    @include mq("md", max) {
+      margin-bottom: 32px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 48px 24px;
+      text-align: center;
+    }
+    .btn-red {
+      width: 100%;
+      padding: 18px;
+      font-size: 24px;
+      line-height: 34px;
+      margin-top: 45px;
+      @include mq("md", max) {
+        width: auto;
+        margin-top: 32px;
+        padding: 12px 24px;
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }

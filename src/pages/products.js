@@ -1,8 +1,7 @@
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import React, { useState } from "react"
+import ProductItem from "../components/common/product-item"
 import Layout from "../components/layout"
-import { Star } from "../utils/imgImport"
-import { products } from "../utils/staticData"
 
 const filters = ["All Products", "Bottle", "Sachet", "Jerrycan"]
 
@@ -11,22 +10,7 @@ const ProductGroup = ({ data }) => {
     <div className="row">
       {data.map((item, idx) => (
         <div className="col-lg-4 col-md-6" key={idx}>
-          <article className="product-item">
-            <img src={item.img} alt="product img" />
-            <div className="product-info">
-              <h4 className="product-title">{item.title}</h4>
-              <p className="product-size">{item.size}</p>
-              <div className="d-flex flex-wrap align-items-center justify-content-between">
-                <div className="d-flex align-items-center">
-                  <img className="star" src={Star} alt="star" />
-                  <p className="product-rate">{item.rate}/5</p>
-                </div>
-                <Link to={item.uid} className="btn btn-red">
-                  View Product
-                </Link>
-              </div>
-            </div>
-          </article>
+          <ProductItem product={item} />
         </div>
       ))}
     </div>
@@ -37,7 +21,7 @@ const Products = ({ data }) => {
   const [filter, setFilter] = useState("All Products")
 
   const allProducts = data.allPrismicProduct.nodes
-  console.log(allProducts)
+
   return (
     <Layout>
       <section className="section products-section">
@@ -57,7 +41,7 @@ const Products = ({ data }) => {
           </div>
         </div>
 
-        {products.filter(item => item.type === "Bottle").length > 0 && (
+        {allProducts.filter(item => item.data.type === "Bottle").length > 0 && (
           <div
             className={`${
               filter === "All Products"
@@ -69,11 +53,11 @@ const Products = ({ data }) => {
           >
             <h3 className="product-type">Bottle</h3>
             <ProductGroup
-              data={products.filter(item => item.type === "Bottle")}
+              data={allProducts.filter(item => item.data.type === "Bottle")}
             />
           </div>
         )}
-        {products.filter(item => item.type === "Sachet").length > 0 && (
+        {allProducts.filter(item => item.data.type === "Sachet").length > 0 && (
           <div
             className={`${
               filter === "All Products"
@@ -85,11 +69,12 @@ const Products = ({ data }) => {
           >
             <h3 className="product-type">Sachet</h3>
             <ProductGroup
-              data={products.filter(item => item.type === "Sachet")}
+              data={allProducts.filter(item => item.data.type === "Sachet")}
             />
           </div>
         )}
-        {products.filter(item => item.type === "Jerrycan").length > 0 && (
+        {allProducts.filter(item => item.data.type === "Jerrycan").length >
+          0 && (
           <div
             className={`${
               filter === "All Products"
@@ -101,7 +86,7 @@ const Products = ({ data }) => {
           >
             <h3 className="product-type">Jerrycan</h3>
             <ProductGroup
-              data={products.filter(item => item.type === "Jerrycan")}
+              data={allProducts.filter(item => item.data.type === "Jerrycan")}
             />
           </div>
         )}

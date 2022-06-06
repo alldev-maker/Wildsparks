@@ -1,0 +1,61 @@
+.accordion {
+  transition: all 0.3s ease;
+
+  &.active {
+    .accordion__toggler {
+      .sign {
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .accordion__content {
+      max-height: 1000px;
+    }
+  }
+
+  .accordion__toggler {
+    padding: 15px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #bababa;
+
+    .question {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      color: #414141;
+      @include mq("md", max) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    .sign {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: -7.5px;
+        right: 5px;
+        width: 10px;
+        height: 20px;
+        background: url("../images/arrow-icon.svg") no-repeat center;
+        transition: transform 0.3s ease-in-out;
+        @include mq("md", max) {
+          top: -12px;
+        }
+      }
+    }
+  }
+
+  .accordion__content {
+    max-height: 0px;
+    font-size: 16px;
+    overflow: hidden;
+    margin-top: 15px;
+    p {
+      color: #333232;
+      text-align: left;
+    }
+  }
+}

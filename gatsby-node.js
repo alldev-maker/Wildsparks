@@ -9,6 +9,20 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           uid
           id
+          data {
+            headline_stats {
+              statistic
+              icon {
+                gatsbyImageData
+              }
+            }
+            type
+            rating
+            product_name
+            product_image {
+              gatsbyImageData
+            }
+          }
         }
       }
       allPrismicRecipe {
@@ -20,16 +34,19 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  queryResults.data.allPrismicProduct.nodes.forEach(node => {
+  queryResults.data.allPrismicProduct?.nodes.forEach(node => {
     createPage({
       path: `/product/${node.uid}`,
       component: path.resolve(`src/templates/product.js`),
       context: {
         id: node.id,
+        related_products: queryResults.data.allPrismicProduct?.nodes
+          .filter(item => item.data.type === node.data.type)
+          .slice(0, 3),
       },
     })
   })
-  queryResults.data.allPrismiRecipe.nodes.forEach(node => {
+  queryResults.data.allPrismiRecipe?.nodes.forEach(node => {
     createPage({
       path: `/recipe/${node.uid}`,
       component: path.resolve(`src/templates/recipe.js`),
