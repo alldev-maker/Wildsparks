@@ -6,6 +6,17 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-prismic",
+      options: {
+        repositoryName: "wildsparks",
+        schemas: {
+          product: require("./custom_types/product.json"),
+          recipe: require("./custom_types/recipe.json"),
+          vendor: require("./custom_types/vendor.json"),
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

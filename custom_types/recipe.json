@@ -1,0 +1,137 @@
+{
+  "Main": {
+    "cuisine": {
+      "type": "Select",
+      "config": {
+        "options": ["Continental", "Caribbean", "African"],
+        "default_value": "Continental",
+        "label": "cuisine_type",
+        "placeholder": "Cuisine Type"
+      }
+    },
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "id"
+      }
+    },
+    "title": {
+      "type": "Text",
+      "config": {
+        "label": "Title",
+        "placeholder": "Title"
+      }
+    },
+    "header_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 700,
+          "height": 500
+        },
+        "thumbnails": [],
+        "label": "header_image"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label": "description"
+      }
+    },
+    "total_time": {
+      "type": "Number",
+      "config": {
+        "label": "Total Time",
+        "placeholder": "Total Time"
+      }
+    },
+    "prep_time": {
+      "type": "Number",
+      "config": {
+        "label": "Prep Time",
+        "placeholder": "Prep Time"
+      }
+    },
+    "cook_time": {
+      "type": "Number",
+      "config": {
+        "label": "Cook Time",
+        "placeholder": "Cook Time"
+      }
+    },
+    "servings": {
+      "type": "Number",
+      "config": {
+        "label": "Servings",
+        "placeholder": "Servings"
+      }
+    },
+    "rating": {
+      "type": "Number",
+      "config": {
+        "label": "Rating",
+        "placeholder": "Rating"
+      }
+    },
+    "ingredients": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "quantity": {
+            "type": "Number",
+            "config": {
+              "label": "quantity"
+            }
+          },
+          "measure": {
+            "type": "Text",
+            "config": {
+              "label": "Measure",
+              "placeholder": "Measure"
+            }
+          },
+          "ingredient": {
+            "type": "Text",
+            "config": {
+              "label": "Ingredient",
+              "placeholder": "Ingredient"
+            }
+          }
+        },
+        "label": "ingredients"
+      }
+    },
+    "instructions": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "instruction": {
+            "type": "Text",
+            "config": {
+              "label": "Instruction",
+              "placeholder": "Instruction"
+            }
+          }
+        },
+        "label": "instructions"
+      }
+    },
+    "tips": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "tip": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+              "label": "tip"
+            }
+          }
+        },
+        "label": "tips"
+      }
+    }
+  }
+}

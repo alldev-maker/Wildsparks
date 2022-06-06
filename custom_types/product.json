@@ -1,0 +1,107 @@
+{
+  "Main": {
+    "type": {
+      "type": "Select",
+      "config": {
+        "options": ["Bottle", "Sachet", "Jerrycan"],
+        "default_value": "Bottle",
+        "label": "Type",
+        "placeholder": "Product Type"
+      }
+    },
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "product_id"
+      }
+    },
+    "product_name": {
+      "type": "Text",
+      "config": {
+        "label": "Product Name",
+        "placeholder": "Product Name"
+      }
+    },
+    "product_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 500,
+          "height": 500
+        },
+        "thumbnails": [],
+        "label": "product_image"
+      }
+    },
+    "headline_stats": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "icon": {
+            "type": "Image",
+            "config": {
+              "constraint": {
+                "width": 100,
+                "height": 100
+              },
+              "thumbnails": [],
+              "label": "icon"
+            }
+          },
+          "statistic": {
+            "type": "Text",
+            "config": {
+              "label": "Statistic",
+              "placeholder": "Statistic"
+            }
+          }
+        },
+        "label": "headline_stats"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "config": {
+        "label": "Description",
+        "placeholder": "Description"
+      }
+    },
+    "nutritional_facts": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "fact": {
+            "type": "Text",
+            "config": {
+              "label": "Fact",
+              "placeholder": "Fact"
+            }
+          }
+        },
+        "label": "nutritional_facts"
+      }
+    },
+    "ingredients": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "ingredient": {
+            "type": "Text",
+            "config": {
+              "label": "Ingredient",
+              "placeholder": "Ingredient"
+            }
+          }
+        },
+        "label": "ingredients"
+      }
+    },
+    "rating": {
+      "type": "Number",
+      "config": {
+        "label": "Rating",
+        "placeholder": "Rating"
+      }
+    }
+  }
+}

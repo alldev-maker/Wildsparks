@@ -1,0 +1,41 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "id"
+      }
+    },
+    "name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label": "name"
+      }
+    },
+    "image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 500,
+          "height": 300
+        },
+        "thumbnails": [],
+        "label": "image"
+      }
+    },
+    "address": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label": "address"
+      }
+    },
+    "location": {
+      "type": "GeoPoint",
+      "config": {
+        "label": "location"
+      }
+    }
+  }
+}

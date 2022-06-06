@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import React, { useState } from "react"
 import Layout from "../components/layout"
 import { Star } from "../utils/imgImport"
@@ -33,8 +33,11 @@ const ProductGroup = ({ data }) => {
   )
 }
 
-const Products = () => {
+const Products = ({ data }) => {
   const [filter, setFilter] = useState("All Products")
+
+  const allProducts = data.allPrismicProduct.nodes
+  console.log(allProducts)
   return (
     <Layout>
       <section className="section products-section">
@@ -108,3 +111,27 @@ const Products = () => {
 }
 
 export default Products
+
+export const query = graphql`
+  query Products {
+    allPrismicProduct {
+      nodes {
+        uid
+        data {
+          headline_stats {
+            statistic
+            icon {
+              gatsbyImageData
+            }
+          }
+          type
+          rating
+          product_name
+          product_image {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`

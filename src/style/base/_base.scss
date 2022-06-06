@@ -43,7 +43,7 @@ ul {
 
 .container {
   @include mq("lg") {
-    max-width: calc(100% - 96px);
+    max-width: 1200px;
   }
   @include mq("md", max) {
     max-width: calc(100% - 16px);
