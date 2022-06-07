@@ -32,7 +32,7 @@ export const nav_menus = [
   },
   {
     name: "Where to Buy",
-    to: "where-to-buy",
+    to: "/where-to-buy",
   },
 ]
 

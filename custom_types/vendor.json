@@ -1,16 +1,10 @@
 {
   "Main": {
-    "uid": {
-      "type": "UID",
-      "config": {
-        "label": "id"
-      }
-    },
     "name": {
-      "type": "StructuredText",
+      "type": "Text",
       "config": {
-        "single": "heading1,heading2,heading3,heading4,heading5,heading6",
-        "label": "name"
+        "label": "Name",
+        "placeholder": "Name"
       }
     },
     "image": {
@@ -25,10 +19,10 @@
       }
     },
     "address": {
-      "type": "StructuredText",
+      "type": "Text",
       "config": {
-        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-        "label": "address"
+        "label": "Address",
+        "placeholder": "Address"
       }
     },
     "location": {

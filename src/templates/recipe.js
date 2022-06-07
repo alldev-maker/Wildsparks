@@ -142,7 +142,7 @@ const Recipe = ({ data, pageContext }) => {
             <h4 className="text-uppercase mb-0 me-3">share this recipe</h4>
             <div className="social-links">
               {social_links.map((item, idx) => (
-                <a key={idx}>
+                <a key={idx} href={item.to}>
                   <img src={item.icon} alt="social" />
                 </a>
               ))}
