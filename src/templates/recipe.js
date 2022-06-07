@@ -28,8 +28,6 @@ const RecipeInfo = ({ info }) => (
 )
 
 const Recipe = ({ data, pageContext }) => {
-  console.log(data)
-  console.log(pageContext)
   const { id } = pageContext
   const {
     title,
@@ -45,8 +43,6 @@ const Recipe = ({ data, pageContext }) => {
     rating,
   } = data.prismicRecipe.data
   const recipes = data.allPrismicRecipe.nodes
-
-  console.log(recipes)
 
   const curIndex = recipes.findIndex(item => item.id === id)
 
