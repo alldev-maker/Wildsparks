@@ -34,7 +34,6 @@ const Recipes = ({ data }) => {
     setNext(next + postsPerPage)
   }
 
-  console.log(postsToShow)
   return (
     <Layout>
       <section className="section recipes-section">

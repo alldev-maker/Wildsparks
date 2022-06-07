@@ -4,11 +4,8 @@ const Accordion = ({ question, answer }) => {
   const [active, setActive] = useState(false)
 
   const handleClick = () => {
-    // const activeAccordions = document.querySelectorAll(".accordion.active");
-    // activeAccordions.forEach(accordion => accordion.classList.remove("active"));
     setActive(!active)
   }
-  console.log(answer)
   return (
     <div className={`accordion ${active ? "active" : ""}`}>
       <button

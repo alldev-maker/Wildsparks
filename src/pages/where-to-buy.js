@@ -11,7 +11,6 @@ const WhereToBuy = ({ data }) => {
     googleMapsApiKey: "AIzaSyBHTbwUKwovHd6uO71iWD2teU-OF_6UCaU", // Add your API key
   })
   const vendors = data.allPrismicVendor.nodes
-  console.log(vendors)
 
   return (
     <Layout>

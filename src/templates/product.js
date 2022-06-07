@@ -26,7 +26,6 @@ const Product = ({ data, pageContext }) => {
     product_image,
     product_name,
   } = data.prismicProduct.data
-  console.log(data.prismicProduct)
 
   const accordions = [
     {
