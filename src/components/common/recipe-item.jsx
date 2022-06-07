@@ -1,22 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const RecipeItem = ({ data }) => (
+const RecipeItem = ({ recipe }) => (
   <article className="recipe-item">
-    <img src={data.img} alt="prod item" />
+    <GatsbyImage
+      class="recipe-item__img"
+      image={getImage(recipe.data.header_image)}
+      alt={recipe.data.title}
+    />
     <div className="recipe-item__body">
-      <h4 className="recipe-title">{data.title}</h4>
+      <h4 className="recipe-title">{recipe.data.title}</h4>
       <div className="recipe-info">
         <div className="col-6">
           <p className="recipe-label">Prep Time:</p>
-          <p>{data.prep_time}</p>
+          <p>{recipe.data.prep_time}</p>
         </div>
         <div className="col-6">
           <p className="recipe-label">Servings:</p>
-          <p>{data.servings}</p>
+          <p>{recipe.data.servings}</p>
         </div>
       </div>
-      <Link to={data.uid} className="btn btn-red">
+      <Link to={`/recipe/${recipe.uid}`} className="btn btn-red">
         View Recipe
       </Link>
     </div>

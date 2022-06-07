@@ -34,10 +34,10 @@
       }
     },
     "description": {
-      "type": "StructuredText",
+      "type": "Text",
       "config": {
-        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-        "label": "description"
+        "label": "Description",
+        "placeholder": "Description"
       }
     },
     "total_time": {
@@ -76,61 +76,27 @@
       }
     },
     "ingredients": {
-      "type": "Group",
+      "type": "StructuredText",
       "config": {
-        "fields": {
-          "quantity": {
-            "type": "Number",
-            "config": {
-              "label": "quantity"
-            }
-          },
-          "measure": {
-            "type": "Text",
-            "config": {
-              "label": "Measure",
-              "placeholder": "Measure"
-            }
-          },
-          "ingredient": {
-            "type": "Text",
-            "config": {
-              "label": "Ingredient",
-              "placeholder": "Ingredient"
-            }
-          }
-        },
-        "label": "ingredients"
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Ingredients",
+        "placeholder": "Ingredients"
       }
     },
     "instructions": {
-      "type": "Group",
+      "type": "StructuredText",
       "config": {
-        "fields": {
-          "instruction": {
-            "type": "Text",
-            "config": {
-              "label": "Instruction",
-              "placeholder": "Instruction"
-            }
-          }
-        },
-        "label": "instructions"
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Instructions",
+        "placeholder": "Instructions"
       }
     },
     "tips": {
-      "type": "Group",
+      "type": "StructuredText",
       "config": {
-        "fields": {
-          "tip": {
-            "type": "StructuredText",
-            "config": {
-              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-              "label": "tip"
-            }
-          }
-        },
-        "label": "tips"
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Tips",
+        "placeholder": "Tips"
       }
     }
   }

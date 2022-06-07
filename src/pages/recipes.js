@@ -1,28 +1,33 @@
 import React, { useState, useEffect } from "react"
+import { graphql } from "gatsby"
 import RecipeItem from "../components/common/recipe-item"
 import Layout from "../components/layout"
-import { recipes } from "../utils/staticData"
 
 const filters = ["All Recipes", "Continental", "Caribbean", "African"]
 
-const Recipes = () => {
-  const postsPerPage = 9
+const Recipes = ({ data }) => {
+  const postsPerPage = 6
   let arrayForHoldingPosts = []
 
-  const [filter, setFilter] = useState("All Products")
+  const allRecipes = data.allPrismicRecipe.nodes
+
+  const [filter, setFilter] = useState("All Recipes")
 
   const [postsToShow, setPostsToShow] = useState([])
   const [next, setNext] = useState(3)
 
   const loopWithSlice = end => {
-    const slicedPosts = recipes.slice(0, end)
+    const slicedPosts =
+      filter === "All Recipes"
+        ? allRecipes.slice(0, end)
+        : allRecipes.filter(item => item.data.cuisine === filter).slice(0, end)
     arrayForHoldingPosts = [...arrayForHoldingPosts, ...slicedPosts]
     setPostsToShow(arrayForHoldingPosts)
   }
 
   useEffect(() => {
     loopWithSlice(postsPerPage)
-  }, [])
+  }, [filter])
 
   const handleShowMorePosts = () => {
     loopWithSlice(next + postsPerPage)
@@ -52,7 +57,7 @@ const Recipes = () => {
         <div className="row">
           {postsToShow.map((item, idx) => (
             <div className="col-lg-4 col-md-6" key={idx}>
-              <RecipeItem data={item} />
+              <RecipeItem recipe={item} />
             </div>
           ))}
         </div>
@@ -67,3 +72,22 @@ const Recipes = () => {
 }
 
 export default Recipes
+
+export const query = graphql`
+  query Recipes {
+    allPrismicRecipe {
+      nodes {
+        uid
+        data {
+          cuisine
+          title
+          prep_time
+          servings
+          header_image {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`

@@ -23,6 +23,13 @@ import planet from "../images/planet.svg"
 import education from "../images/education.svg"
 import packaging from "../images/package.svg"
 import carbon from "../images/carbon.svg"
+import arrowLeft from "../images/arrow-left.svg"
+import arrowRight from "../images/arrow-right.svg"
+
+import totalTime from "../images/total_time.svg"
+import prepTime from "../images/prep_time.svg"
+import cookTime from "../images/cook_time.svg"
+import servings from "../images/servings.svg"
 
 export const HeroImg = heroImg
 export const Prod1 = prod1
@@ -49,3 +56,11 @@ export const Planet = planet
 export const Packaging = packaging
 export const Education = education
 export const Carbon = carbon
+
+export const ArrowLeft = arrowLeft
+export const ArrowRight = arrowRight
+
+export const TotalTime = totalTime
+export const PrepTime = prepTime
+export const CookTime = cookTime
+export const Servings = servings

@@ -46,7 +46,8 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  queryResults.data.allPrismiRecipe?.nodes.forEach(node => {
+
+  queryResults.data.allPrismicRecipe?.nodes.forEach(node => {
     createPage({
       path: `/recipe/${node.uid}`,
       component: path.resolve(`src/templates/recipe.js`),
