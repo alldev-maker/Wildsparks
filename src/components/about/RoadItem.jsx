@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 
 const RoadItem = ({ data, idx }) => (
@@ -15,7 +16,9 @@ const RoadItem = ({ data, idx }) => (
       <div>
         <h2 className="title">{data.title}</h2>
         <p className="content">{data.content}</p>
-        <button className="btn btn-red">{data.btnName}</button>
+        <Link className="btn btn-red" to={data.to} state={{ leadForm: true }}>
+          {data.btnName}
+        </Link>
       </div>
     </div>
   </div>

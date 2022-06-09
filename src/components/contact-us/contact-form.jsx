@@ -1,11 +1,25 @@
-import React, { useReducer, useCallback, useRef } from "react"
+import React, { useReducer, useCallback, useRef, useState } from "react"
 import validator from "validator"
 import emailjs from "@emailjs/browser"
 import { CountryDropdown, RegionDropdown } from "react-country-region-selector"
+import Modal from "react-modal"
 
 import { FormInput, FormTextarea } from "../common/FormControl"
+import { Mail } from "../../utils/imgImport"
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+}
 
 const ContactForm = () => {
+  const [modalIsOpen, setIsOpen] = useState(false)
   const [state, setState] = useReducer(
     (old, action) => ({ ...old, ...action }),
     {
@@ -61,6 +75,7 @@ const ContactForm = () => {
   const formData = useRef()
   const handleSubmit = e => {
     e.preventDefault()
+    setIsOpen(true)
     emailjs
       .sendForm(
         "service_i2jg5ko",
@@ -70,6 +85,7 @@ const ContactForm = () => {
       )
       .then(response => {
         console.log("SUCCESS!", response.status, response.text)
+        response.status === 200 && setIsOpen(true)
       })
       .catch(err => {
         console.log("FAILED...", err)
@@ -177,6 +193,19 @@ const ContactForm = () => {
           Submit Form
         </button>
       </form>
+      <Modal
+        isOpen={modalIsOpen}
+        style={customStyles}
+        contentLabel="Example Modal"
+        onRequestClose={() => setIsOpen(false)}
+        ariaHideApp={false}
+      >
+        <span className="mail-icon">
+          <img src={Mail} alt="mail" />
+        </span>
+        <h1 className="text-center my-3">Email sent successfully</h1>
+        <p>We will be in touch with you soon</p>
+      </Modal>
     </div>
   )
 }

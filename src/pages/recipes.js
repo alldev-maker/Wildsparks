@@ -9,11 +9,9 @@ const filters = ["All Recipes", "Continental", "Caribbean", "African"]
 const Recipes = ({ data }) => {
   const postsPerPage = 6
   let arrayForHoldingPosts = []
-
   const allRecipes = data.allPrismicRecipe.nodes
 
   const [filter, setFilter] = useState("All Recipes")
-
   const [postsToShow, setPostsToShow] = useState([])
   const [next, setNext] = useState(3)
 
@@ -26,20 +24,20 @@ const Recipes = ({ data }) => {
     setPostsToShow(arrayForHoldingPosts)
   }
 
-  useEffect(() => {
-    loopWithSlice(postsPerPage)
-  }, [filter])
-
   const handleShowMorePosts = () => {
     loopWithSlice(next + postsPerPage)
     setNext(next + postsPerPage)
   }
 
+  useEffect(() => {
+    loopWithSlice(postsPerPage)
+  }, [filter])
+
   return (
     <Layout>
       <Seo title="Recipes" />
-      <section className="section recipes-section">
-        <h1 className="text-white text-uppercase">Recipes</h1>
+      <div className="d-md-none mt-3">
+        <h1 className="text-black text-uppercase">Recipes</h1>
         <div className="filter-box">
           <p className="filter-label">Filter</p>
           <div className="filter-list">
@@ -52,6 +50,25 @@ const Recipes = ({ data }) => {
                 {item}
               </button>
             ))}
+          </div>
+        </div>
+      </div>
+      <section className="section recipes-section">
+        <div className="d-none d-md-block">
+          <h1 className="text-white text-uppercase">Recipes</h1>
+          <div className="filter-box">
+            <p className="filter-label">Filter</p>
+            <div className="filter-list">
+              {filters.map((item, idx) => (
+                <button
+                  key={idx}
+                  className={`filter-item ${item === filter ? "active" : ""}`}
+                  onClick={() => setFilter(item)}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 

@@ -18,8 +18,8 @@ const Footer = () => (
       <img className="logo" src={Logo} alt="logo" />
     </div>
     <p className="text-center">
-      © {new Date().getFullYear()} Frito-Lay North America, Inc. a Division of
-      PepsiCo
+      © {new Date().getFullYear()} Wildsparks Nigeria, an Africa’s Favourite
+      Brands Company
     </p>
   </footer>
 )

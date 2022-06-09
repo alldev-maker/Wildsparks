@@ -7,6 +7,8 @@ import twitter from "../images/twitter.svg"
 import youtube from "../images/youtube.svg"
 
 import heroImg from "../images/hero.png"
+import privacyHero from "../images/privacy-hero.png"
+
 import prod1 from "../images/product1.png"
 import prod2 from "../images/product2.png"
 
@@ -36,6 +38,9 @@ import mail from "../images/mail.svg"
 import phone from "../images/phone.svg"
 
 export const HeroImg = heroImg
+export const AboutHero = aboutHero
+export const PrivacyHero = privacyHero
+
 export const Prod1 = prod1
 export const Prod2 = prod2
 
@@ -51,7 +56,6 @@ export const Facebook = facebook
 export const Twitter = twitter
 export const Youtube = youtube
 
-export const AboutHero = aboutHero
 export const Farmer = farmer
 export const Retailer = retailer
 export const Consumer = consumer

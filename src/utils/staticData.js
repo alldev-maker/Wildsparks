@@ -53,10 +53,6 @@ export const footer_menus = [
     name: "Privacy Policy",
     to: "/privacy",
   },
-  {
-    name: "Accessibility Statement",
-    to: "/accessibility",
-  },
 ]
 
 export const social_links = [
@@ -269,6 +265,7 @@ export const roadmap = [
     content:
       "Our network of over 100 farmers supply their Palm Oil directly to one of our manufacturing and distribution hubs. Here, the oil is quality-checked, processed and bottled. As we control our own distribution and retail network, we pay farmers market-beating prices every time. Thanks to this, we get access to the highest quality palm oil on offer. In addition, we reinvest a portion of our profits into farmer development, through education, credit and consultancy.",
     btnName: "Supply to wildsparks",
+    to: "/contact",
   },
   {
     img: Retailer,
@@ -276,6 +273,7 @@ export const roadmap = [
     content:
       "From the hub, there are no more stops, as products are directly distributed to our network of over 2000 informal retailers across Nigeria. We do away with distribution partners and networks to remove unnecessary costs. We offer best-in-class margins to our retail partners. Further, we offer Wildsparks on credit to our micro-retail partners, meaning they don’t have to tie up hard-earned working capital into inventory.",
     btnName: "Become a retailer",
+    to: "/contact",
   },
   {
     img: Consumer,
@@ -283,6 +281,7 @@ export const roadmap = [
     content:
       "As a result of the benefits we get from direct distribution, the customer can always rest assured that with Wildsparks they are enjoying the highest-quality, sustainable palm oil. In every market Wildsparks is introduced, it quickly becomes a customer favourite. Being able to trace the source, the customer can rest assured that their palm oil is single-origin and sustainably sourced.",
     btnName: "Where to buy",
+    to: "/where-to-buy",
   },
 ]
 

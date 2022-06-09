@@ -1,0 +1,56 @@
+.privacy-hero {
+  max-width: 911px;
+  margin-left: auto;
+  margin-right: auto;
+  .heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+    h1 {
+      max-width: 265px;
+      @include mq("lg", max) {
+        text-align: left;
+        max-width: 100%;
+        margin-bottom: 32px;
+      }
+    }
+    p {
+      max-width: 550px;
+      @include mq("lg", max) {
+        max-width: 100%;
+      }
+    }
+  }
+  .content {
+    margin: 40px 0 80px;
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  p {
+    font-size: 24px;
+    line-height: 36px;
+    @include mq("md", max) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.terms {
+  h1 {
+    font-size: 36px;
+  }
+  .heading {
+    h1 {
+      max-width: 350px;
+      @include mq("lg", max) {
+        max-width: 100%;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}

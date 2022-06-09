@@ -120,11 +120,11 @@ ul {
 }
 
 .section {
-  padding: 40px 20px 24px;
+  padding: 20px 20px;
   border-radius: 24px;
-  margin: 32px 0;
+  margin: 20px 0;
   @include mq("md") {
-    margin: 48px 0;
+    margin: 20px 0;
   }
   @include mq("xl") {
     padding: 60px;

@@ -88,13 +88,11 @@
 .product-detail {
   background: #f7f8fa;
   border-radius: 24px;
-  margin: 32px 0;
-  @include mq("md") {
-    margin: 48px 0;
-  }
+  margin: 20px 0;
   .product {
     &-name {
       padding: 60px 60px 0;
+      margin-bottom: 30px;
       @include mq("md", max) {
         padding: 32px 32px 0;
       }
@@ -115,11 +113,8 @@
     &-stat {
       display: flex;
       align-items: center;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       width: max-content;
-      @include mq("lg", max) {
-        margin-bottom: 24px;
-      }
       @include mq("sm", max) {
         padding: 12px;
         background-color: white;

@@ -5,7 +5,7 @@ import ContactForm from "../components/contact-us/contact-form"
 import Seo from "../components/seo"
 import { Location, Mail, Phone } from "../utils/imgImport"
 
-const IndexPage = ({ location }) => {
+const ContactUs = ({ location }) => {
   const [showForm, setShowFrom] = useState(false)
   useEffect(() => {
     setShowFrom(false)
@@ -25,7 +25,7 @@ const IndexPage = ({ location }) => {
               : "We’re here to help, so drop us a line."}
           </p>
         </div>
-        {showForm ? (
+        {showForm || location.state?.leadForm === true ? (
           <ContactForm />
         ) : (
           <div className="row justify-content-center">
@@ -87,4 +87,4 @@ const IndexPage = ({ location }) => {
   )
 }
 
-export default IndexPage
+export default ContactUs

@@ -1,8 +1,6 @@
 .hero-section {
-  margin: 32px 0;
-  @include mq("md") {
-    margin: 48px 0;
-  }
+  margin: 20px 0;
+
   .hero-img {
     width: 100%;
     background: linear-gradient(

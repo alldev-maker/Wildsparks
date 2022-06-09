@@ -26,8 +26,8 @@ const Products = ({ data }) => {
   return (
     <Layout>
       <Seo title="Products" />
-      <section className="section products-section">
-        <h1 className="text-white text-uppercase">Products</h1>
+      <div className="d-md-none mt-3">
+        <h1 className="text-black text-uppercase ">Products</h1>
         <div className="filter-box">
           <p className="filter-label">Filter</p>
           <div className="filter-list">
@@ -40,6 +40,25 @@ const Products = ({ data }) => {
                 {item}
               </button>
             ))}
+          </div>
+        </div>
+      </div>
+      <section className="section products-section">
+        <div className="d-none d-md-block">
+          <h1 className="text-white text-uppercase">Products</h1>
+          <div className="filter-box">
+            <p className="filter-label">Filter</p>
+            <div className="filter-list">
+              {filters.map((item, idx) => (
+                <button
+                  key={idx}
+                  className={`filter-item ${item === filter ? "active" : ""}`}
+                  onClick={() => setFilter(item)}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 

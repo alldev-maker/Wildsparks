@@ -34,7 +34,7 @@ const Map = ({ vendors }) => {
     <GoogleMap
       onLoad={handleOnLoad}
       onClick={() => setActiveMarker(null)}
-      mapContainerStyle={{ width: "100%", height: "750px" }}
+      mapContainerStyle={{ width: "100%", height: "300px" }}
     >
       {markers.map(item => (
         <Marker

@@ -15,11 +15,9 @@
       background-color: white;
       border-radius: 0 0 24px 24px;
       padding: 30px 20px;
-      @include mq("lg", max) {
-        padding: 22px;
-      }
+
       .recipe-title {
-        font-size: 16px;
+        font-size: 15px;
         @include mq("lg", max) {
           font-size: 13px;
         }
@@ -126,7 +124,7 @@
         }
       }
       @include mq("md", max) {
-        margin: 48px 0 36px;
+        margin: 20px 0;
       }
     }
     &-desc {
