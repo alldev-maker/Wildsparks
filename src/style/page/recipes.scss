@@ -1,7 +1,7 @@
 .recipes-section {
   background-image: url("../images/green-pattern.png");
   @include mq("md", max) {
-    padding: 0;
+    padding: 48px 24px;
   }
   @include mq("md", max) {
     background: $green;
@@ -73,6 +73,12 @@
   }
 }
 
+.section.recipe {
+  background-image: url("../images/green-pattern.png");
+  @include mq("md", max) {
+    background: #f7f8fa;
+  }
+}
 .recipe-detail {
   padding: 60px 100px;
   background-color: white;
@@ -80,7 +86,7 @@
   @include mq("md", max) {
     background-color: $gray;
     border-radius: 24px;
-    padding: 48px 24px;
+    padding: 48px 0;
   }
   .recipe {
     &-title {

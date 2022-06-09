@@ -75,7 +75,7 @@ const Recipe = ({ data, pageContext }) => {
   return (
     <Layout>
       <Seo title="Recipe Detail" />
-      <section className="section recipes-section">
+      <section className="section recipe">
         <div className="recipe-detail">
           <h1 className="recipe-title">{title}</h1>
           <div className="position-relative">
