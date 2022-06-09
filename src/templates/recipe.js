@@ -12,6 +12,7 @@ import {
   TotalTime,
 } from "../utils/imgImport"
 import { social_links } from "../utils/staticData"
+import Seo from "../components/seo"
 
 function numFormat(n) {
   return n > 9 ? "" + n : "0" + n
@@ -71,6 +72,7 @@ const Recipe = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <Seo title="Recipe Detail" />
       <section className="section recipes-section">
         <div className="recipe-detail">
           <h1 className="recipe-title">{title}</h1>

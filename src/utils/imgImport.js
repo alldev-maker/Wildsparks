@@ -31,6 +31,10 @@ import prepTime from "../images/prep_time.svg"
 import cookTime from "../images/cook_time.svg"
 import servings from "../images/servings.svg"
 
+import location from "../images/location.svg"
+import mail from "../images/mail.svg"
+import phone from "../images/phone.svg"
+
 export const HeroImg = heroImg
 export const Prod1 = prod1
 export const Prod2 = prod2
@@ -64,3 +68,7 @@ export const TotalTime = totalTime
 export const PrepTime = prepTime
 export const CookTime = cookTime
 export const Servings = servings
+
+export const Location = location
+export const Mail = mail
+export const Phone = phone

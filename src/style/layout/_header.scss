@@ -4,7 +4,6 @@ header {
   }
   .navbar {
     flex-wrap: nowrap;
-    background-color: white;
     border-radius: 24px;
     padding: 23px 0;
     @include mq("md") {
@@ -33,14 +32,21 @@ header {
           margin-left: 30px;
         }
         .nav-link {
-          padding: 12px;
+          padding: 10px;
           color: white;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 500;
-          line-height: 29.52px;
+          line-height: 24px;
           &.active {
             background: #006441;
             border-radius: 12px;
+          }
+          @include mq("lg", max) {
+            font-size: 16px;
+          }
+          @include mq("md", max) {
+            font-size: 24px;
+            line-height: 31px;
           }
         }
       }
@@ -55,7 +61,7 @@ header {
           height: calc(100vh - 83px);
           padding-top: 30px;
           margin-left: -20px;
-          background: white;
+          background: #ffac00;
           flex-direction: column;
           z-index: 99;
           overflow: auto;

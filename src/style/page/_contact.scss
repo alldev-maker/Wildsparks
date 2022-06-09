@@ -1,0 +1,177 @@
+.contact-us {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  .heading {
+    margin-bottom: 60px;
+    h1 {
+      margin-bottom: 24px;
+    }
+    &-body {
+      max-width: 773px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+    }
+    @include mq("md", max) {
+      margin-bottom: 30px;
+    }
+  }
+  .contact-card {
+    background: #ebecee;
+    border-radius: 24px;
+    height: 590px;
+    padding: 65px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    @include mq("xl", max) {
+      padding: 55px 40px;
+    }
+    @include mq("lg", max) {
+      height: 470px;
+      max-width: 335px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .icon {
+      display: inline-block;
+      background: #93969b;
+      border-radius: 50%;
+      text-align: center;
+      padding: 18px;
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .title {
+      margin: 24px 0;
+      text-align: left;
+      @include mq("md", max) {
+        font-size: 32px;
+      }
+    }
+    .content {
+      font-size: 24px;
+      line-height: 36px;
+      @include mq("md", max) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    .btn-black {
+      font-size: 24px;
+      padding: 12px 24px;
+    }
+    .phone-number {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      @include mq("md", max) {
+        font-size: 28px;
+        line-height: 34px;
+      }
+    }
+    .available-time {
+      font-size: 24px;
+      line-height: 28px;
+      @include mq("md", max) {
+        font-size: 20px;
+      }
+    }
+  }
+  .contact-form {
+    padding: 125px 160px;
+    background: #ebecee;
+    border-radius: 24px;
+    @include mq("lg", max) {
+      padding: 40px;
+    }
+    .form-group {
+      margin-bottom: 36px;
+    }
+    .form-control {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 40px;
+      resize: none;
+      @include mq("lg", max) {
+        padding: 18px;
+      }
+      &:focus {
+        border: 1px solid $green;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    .form-label {
+      font-weight: 500;
+      font-size: 20.1802px;
+      line-height: 25px;
+      color: black;
+      margin-bottom: 12px;
+      @include mq("md", max) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .form-select {
+      &:focus {
+        border-color: $green;
+        box-shadow: none;
+      }
+      option {
+        &:first-child {
+          color: #869ea4;
+        }
+      }
+    }
+    .error {
+      border: 1px solid $red !important;
+    }
+    .errorsapn {
+      font-size: 1rem;
+      font-weight: 400;
+      width: 100%;
+      color: $red;
+      margin-top: 4px;
+    }
+    .text-area {
+      height: 298px;
+      @include mq("md", max) {
+        height: 160px;
+      }
+    }
+    .select-group {
+      display: flex;
+      justify-content: space-between;
+
+      @include mq("md", max) {
+        justify-content: unset;
+        flex-direction: column;
+      }
+    }
+    .btn-black {
+      font-size: 24px;
+      line-height: 30px;
+      padding: 24px 36px;
+      @include mq("md", max) {
+        padding: 12px 24px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+  .dropdown {
+    background-image: url("../images/arrow-down.svg") !important;
+    background-position: right 32px top 50%, 0 0 !important;
+    background-repeat: no-repeat !important;
+    cursor: pointer;
+    margin-bottom: 32px;
+  }
+}

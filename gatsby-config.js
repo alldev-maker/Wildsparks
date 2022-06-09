@@ -14,6 +14,7 @@ module.exports = {
           product: require("./custom_types/product.json"),
           recipe: require("./custom_types/recipe.json"),
           vendor: require("./custom_types/vendor.json"),
+          slider: require("./custom_types/slider.json"),
         },
       },
     },

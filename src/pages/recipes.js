@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import RecipeItem from "../components/common/recipe-item"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const filters = ["All Recipes", "Continental", "Caribbean", "African"]
 
@@ -36,6 +37,7 @@ const Recipes = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title="Recipes" />
       <section className="section recipes-section">
         <h1 className="text-white text-uppercase">Recipes</h1>
         <div className="filter-box">

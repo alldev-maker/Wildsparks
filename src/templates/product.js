@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import ProductItem from "../components/common/product-item"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Accordion from "../components/common/accordion"
+import Seo from "../components/seo"
 
 const HeadlineStat = ({ headline }) => (
   <div className="headline-stat">
@@ -44,6 +45,7 @@ const Product = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <Seo title="Product Detail" />
       <section className="product-detail">
         <h1 className="product-name">{product_name}</h1>
         <div className="headline d-none d-md-flex">

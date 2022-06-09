@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import React, { useState } from "react"
 import ProductItem from "../components/common/product-item"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const filters = ["All Products", "Bottle", "Sachet", "Jerrycan"]
 
@@ -24,6 +25,7 @@ const Products = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title="Products" />
       <section className="section products-section">
         <h1 className="text-white text-uppercase">Products</h1>
         <div className="filter-box">

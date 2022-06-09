@@ -14,7 +14,7 @@ import {
   Recipe3,
   Retailer,
   Twitter,
-  Youtube,
+  // Youtube,
 } from "./imgImport"
 
 export const nav_menus = [
@@ -33,6 +33,10 @@ export const nav_menus = [
   {
     name: "Where to Buy",
     to: "/where-to-buy",
+  },
+  {
+    name: "Contact Us",
+    to: "/contact",
   },
 ]
 
@@ -56,10 +60,10 @@ export const footer_menus = [
 ]
 
 export const social_links = [
-  { icon: Instagram, to: "/" },
-  { icon: Facebook, to: "/" },
-  { icon: Twitter, to: "/" },
-  { icon: Youtube, to: "/" },
+  { icon: Instagram, to: "https://instagram.com/WildsparksOil" },
+  { icon: Facebook, to: "https://web.facebook.com/wildsparksoil" },
+  { icon: Twitter, to: "https://twitter.com/WildsparksOil" },
+  // { icon: Youtube, to: "/" },
 ]
 
 export const products = [

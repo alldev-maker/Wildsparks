@@ -12,6 +12,10 @@
   &-yellow {
     background-color: $yellow;
   }
+  &-black {
+    color: white !important;
+    background-color: black !important;
+  }
   &:hover {
     color: white;
   }

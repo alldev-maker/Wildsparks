@@ -15,6 +15,7 @@
 
 html,
 body {
+  background-color: #ffac00;
   &::-webkit-scrollbar {
     width: 7px;
     height: 0px;
@@ -43,7 +44,7 @@ ul {
 
 .container {
   @include mq("xl") {
-    max-width: 1200px;
+    max-width: 1100px;
   }
   @include mq("md", max) {
     max-width: calc(100% - 16px);
@@ -112,7 +113,7 @@ ul {
 }
 
 .logo {
-  @include mq("lg", max) {
+  @include mq("xl", max) {
     width: 101px;
     height: 37px;
   }

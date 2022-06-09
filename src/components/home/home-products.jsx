@@ -13,7 +13,7 @@ const HomeProducts = () => {
               <img src={item.img} alt="prod item" />
               <div className="product-item__body">
                 <h4 className="product-title">{item.title}</h4>
-                <Link to={item.uid} className="btn btn-red">
+                <Link to="/products" className="btn btn-red">
                   View
                 </Link>
               </div>

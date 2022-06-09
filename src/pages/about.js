@@ -3,11 +3,13 @@ import AboutItem from "../components/about/AboutItem"
 import RoadItem from "../components/about/RoadItem"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import Seo from "../components/seo"
 import { AboutHero } from "../utils/imgImport"
 import { about_us, roadmap } from "../utils/staticData"
 
 const AboutUs = () => (
   <>
+    <Seo title="About Us" />
     <Header />
     <main>
       <section className="about-hero container">
