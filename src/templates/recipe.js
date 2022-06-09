@@ -19,11 +19,13 @@ function numFormat(n) {
 }
 
 const RecipeInfo = ({ info }) => (
-  <div className="info-item">
-    <img src={info.icon} alt={info.label} />
-    <div>
-      <strong>{info.label}</strong>
-      <p>{info.value}</p>
+  <div className="col-6 col-lg-3">
+    <div className="info-item">
+      <img src={info.icon} alt={info.label} />
+      <div>
+        <strong>{info.label}</strong>
+        <p>{info.value}</p>
+      </div>
     </div>
   </div>
 )
@@ -99,7 +101,7 @@ const Recipe = ({ data, pageContext }) => {
               </Link>
             )}
           </div>
-          <div className="recipe-info">
+          <div className="recipe-info row">
             {recipe_info.map((item, idx) => (
               <RecipeInfo info={item} key={idx} />
             ))}

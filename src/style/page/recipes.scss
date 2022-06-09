@@ -1,6 +1,9 @@
 .recipes-section {
   background-image: url("../images/green-pattern.png");
-  @include mq("sm", max) {
+  @include mq("md", max) {
+    padding: 0;
+  }
+  @include mq("md", max) {
     background: $green;
   }
   .recipe-item {
@@ -101,6 +104,7 @@
       .info-item {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-shrink: 0;
         margin-bottom: 12px;
 
