@@ -20,6 +20,8 @@ const AboutUs = () => (
               Feeding the world.
               <br /> Fuelling the future.
             </h1>
+          </div>
+          <div className="col-sm-6">
             <p className="hero-text mb-4">
               Wildsparks began in 2019 with the belief that Palm and its natural
               health benefits can be used to create great-tasting products that
@@ -27,8 +29,6 @@ const AboutUs = () => (
               specialize in healthy palm-based products to give everyone the
               nutrition they need.
             </p>
-          </div>
-          <div className="col-sm-6">
             <p className="hero-text">
               At the same time, we realized that palm oil passed through too
               many intermediaries, compromising on quality and price. We are

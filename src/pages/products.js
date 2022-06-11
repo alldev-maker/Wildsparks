@@ -10,7 +10,7 @@ const ProductGroup = ({ data }) => {
   return (
     <div className="row">
       {data.map((item, idx) => (
-        <div className="col-lg-4 col-md-6" key={idx}>
+        <div className="col-lg-4 col-sm-6" key={idx}>
           <ProductItem product={item} />
         </div>
       ))}

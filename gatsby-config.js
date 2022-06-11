@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Wildsparks`,
+    description: `Wildsparks began in 2019 with the belief that Palm and its natural health benefits can be used to create great-tasting products that nourish consumers and fit into their daily lifestyles. `,
+    author: `Rory`,
+    siteUrl: `https://wildsparks.netlify.app/`,
   },
   plugins: [
     {
@@ -15,6 +15,9 @@ module.exports = {
           recipe: require("./custom_types/recipe.json"),
           vendor: require("./custom_types/vendor.json"),
           slider: require("./custom_types/slider.json"),
+          categories: require("./custom_types/categories.json"),
+          privacy_policy: require("./custom_types/privacy_policy.json"),
+          terms: require("./custom_types/terms.json"),
         },
       },
     },

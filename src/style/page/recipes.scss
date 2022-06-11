@@ -9,6 +9,7 @@
   .recipe-item {
     margin-bottom: 24px;
     border-radius: 24px;
+
     &__img {
       width: 100%;
       border-radius: 24px 24px 0 0;
@@ -17,12 +18,15 @@
     &__body {
       background-color: white;
       border-radius: 0 0 24px 24px;
-      padding: 30px 20px;
+      padding: 25px 12px;
+      @include mq("xl") {
+        padding: 30px 20px;
+      }
 
       .recipe-title {
         font-size: 15px;
         @include mq("lg", max) {
-          font-size: 13px;
+          font-size: 10.5px;
         }
       }
       .recipe-info {
@@ -45,7 +49,7 @@
       .btn-red {
         padding: 12px 24px;
         font-weight: 500;
-        @include mq("md", max) {
+        @include mq("lg", max) {
           padding: 8px 18px;
           font-size: 12px;
         }
@@ -54,8 +58,12 @@
   }
   .filter-box {
     .filter-list {
-      .filter-item.active {
-        background-color: #eaeaea;
+      .filter-item {
+        margin-right: 12px;
+
+        &.active {
+          background-color: #eaeaea;
+        }
       }
     }
   }

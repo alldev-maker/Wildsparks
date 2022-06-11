@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { useLoadScript } from "@react-google-maps/api"
 
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 import Map from "../components/common/map"
 import VendorBox from "../components/where-to-buy/vendor-box"
 
@@ -14,6 +15,7 @@ const WhereToBuy = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title="Where to buy" />
       <section className="section where-to-buy">
         <h1 className="text-white text-uppercase">where to buy</h1>
         <div className="map-container d-none d-md-block">

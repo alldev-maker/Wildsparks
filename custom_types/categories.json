@@ -1,0 +1,30 @@
+{
+  "Main": {
+    "categories": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "category_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {
+                "width": 576,
+                "height": 576
+              },
+              "thumbnails": [],
+              "label": "category_image"
+            }
+          },
+          "category_name": {
+            "type": "Text",
+            "config": {
+              "label": "Category Name",
+              "placeholder": "Category Name"
+            }
+          }
+        },
+        "label": "categories"
+      }
+    }
+  }
+}
