@@ -5,8 +5,8 @@ import Seo from "../components/seo"
 import { PrivacyHero } from "../utils/imgImport"
 
 const Privacy = ({ data }) => {
-  console.log(data)
   const privacy = data?.allPrismicPrivacyPolicy.nodes[0].data
+
   return (
     <Layout>
       <Seo title="Privacy Policy" />
